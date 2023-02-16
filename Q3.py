@@ -15,10 +15,9 @@ class Disk(object):
 
     def showDisk(self):
         penup()
+        pencolor("black")
         goto(self.xpos, self.ypos)
         pendown()
-        begin_fill()
-        fillcolor("red")
         setheading(0)
         forward(self.width / 2)
         left(90)
@@ -29,7 +28,6 @@ class Disk(object):
         forward(self.height)
         left(90)
         forward(self.width / 2)
-        end_fill()
         penup()
         goto(0, 0)
         pendown()
@@ -40,10 +38,9 @@ class Disk(object):
 
     def clearDisk(self):
         penup()
+        pencolor("white")
         goto(self.xpos, self.ypos)
         pendown()
-        begin_fill()
-        fillcolor("white")
         setheading(0)
         forward(self.width / 2)
         left(90)
@@ -54,11 +51,9 @@ class Disk(object):
         forward(self.height)
         left(90)
         forward(self.width / 2)
-        end_fill()
         penup()
         goto(0, 0)
         pendown()
-
 
 class Pole(object):
     def __init__(self, name="", xpos=0, ypos=0, thick=10, length=100):
@@ -74,8 +69,6 @@ class Pole(object):
         penup()
         goto(self.pxpos, self.pypos)
         pendown()
-        begin_fill()
-        fillcolor("black")
         setheading(0)
         forward(self.pthick / 2)
         left(90)
@@ -86,11 +79,9 @@ class Pole(object):
         forward(self.plength)
         left(90)
         forward(self.pthick / 2)
-        end_fill()
         penup()
         goto(0, 0)
         pendown()
-        write(self.pname, align="center", font=("Arial", 12, "normal"))
 
     def pushDisk(self, disk):
         self.stacks.append(disk)
@@ -113,10 +104,14 @@ class Hanoi(object):
         self.destinationp.showPole()
         for i in range(n):
             self.startp.pushDisk(Disk("d" + str(i), 0, i * 150, 20, (n - i) * 30))
+        for disk in self.startp.stacks:
+            disk.showDisk()
 
     def moveDisk(self, start, destination):
         disk = start.popDisk()
+        disk.clearDisk()
         destination.pushDisk(disk)
+        disk.showDisk()
 
     def move_tower(self, n, s, d, w):
         if n == 1:
