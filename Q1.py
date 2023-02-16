@@ -3,13 +3,14 @@ from PySide6.QtCore import *
 from PySide6.QtWidgets import *
 from PySide6.QtGui import *
 
+
 class Simple_drawing_window1(QWidget):
     def __init__(self):
         QWidget.__init__(self, None)
         self.setWindowTitle("Doraemon Drawing")
         self.doraemon = QPixmap("image/doraemon.png")
 
-    def paintEvent(self,e):
+    def paintEvent(self, e):
         p = QPainter()
         p.begin()
         p.drawPixmap(QRect(200, 100, 320, 320), self.doraemon)
@@ -19,13 +20,13 @@ class Simple_drawing_window1(QWidget):
 class Simple_drawing_window2(QWidget):
     def __init__(self):
         QWidget.__init__(self, None)
-        self.setWindowTitle("Simple Drawing")
+        self.setWindowTitle("Pikachu Drawing")
         self.pikachu = QPixmap("image/pikachu_dance_37.png")
 
     def paintEvent(self, e):
         p = QPainter()
         p.begin(self)
-        p.drawPixmap(QRect(200, 100, 400, 200), self.pikachu)
+        p.drawPixmap(QRect(200, 100, 320, 200), self.pikachu)
         p.end()
 
 
@@ -51,7 +52,6 @@ def main():
     w2.show()
     w1.show()
     w3.show()
-
 
     return app.exec_()
 
