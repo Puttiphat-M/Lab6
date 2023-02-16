@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca2f8216-9f85-4c8b-b277-2a633d8712af" name="Changes" comment="window 3" />
+    <list default="true" id="ca2f8216-9f85-4c8b-b277-2a633d8712af" name="Changes" comment="add Q2 file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -75,6 +82,7 @@
       <workItem from="1676541269647" duration="281000" />
       <workItem from="1676542611427" duration="127000" />
       <workItem from="1676542752645" duration="183000" />
+      <workItem from="1676543081070" duration="110000" />
     </task>
     <task id="LOCAL-00001" summary="window 3">
       <created>1676542928490</created>
@@ -83,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676542928490</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add Q2 file">
+      <created>1676543148074</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676543148074</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,7 +129,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="window 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="window 3" />
+    <MESSAGE value="add Q2 file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Q2 file" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Lab6$main.coverage" NAME="main Coverage Results" MODIFIED="1676542886355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
