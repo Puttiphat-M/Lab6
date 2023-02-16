@@ -12,7 +12,7 @@ class Simple_drawing_window1(QWidget):
 
     def paintEvent(self, e):
         p = QPainter()
-        p.begin()
+        p.begin(self)
         p.drawPixmap(QRect(200, 100, 320, 320), self.doraemon)
         p.end()
 
@@ -52,10 +52,6 @@ def main():
     w2.show()
     w1.show()
     w3.show()
-
-    w = Simple_drawing_window2()
-    w.show()
-
     return app.exec_()
 
 
