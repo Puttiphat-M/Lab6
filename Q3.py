@@ -12,7 +12,7 @@ class Disk(object):
         self.ypos = ypos
         self.height = height
         self.width = width
-
+    
     def showDisk(self):
         penup()
         pencolor("black")
