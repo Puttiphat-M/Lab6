@@ -9,11 +9,29 @@ class MainWindow(QtWidgets.QMainWindow):
         super().__init__()
 
         self.label = QtWidgets.QLabel()
+        self.setWindowTitle("A Simple paint program")
         canvas = QtGui.QPixmap(800, 600)
         canvas.fill(Qt.white)
         self.label.setPixmap(canvas)
         self.setCentralWidget(self.label)
 
+        self.last_x, self.last_y = None, None
+
+        self.label2 = QtWidgets.QLabel()
+        self.label2.setText("Drag the mouse to draw")
+        self.label2.setAlignment(Qt.AlignCenter)
+        self.statusBar().addWidget(self.label2,3)
+
+        self.button = QtWidgets.QPushButton("Clear")
+        self.button.clicked.connect(self.clear)
+
+        self.statusBar().addPermanentWidget(self.button)
+
+    def clear(self):
+        canvas = QtGui.QPixmap(800, 600)
+        canvas.fill(Qt.white)
+        self.label.setPixmap(canvas)
+        self.label2.setText("Drag the mouse to draw")
         self.last_x, self.last_y = None, None
 
     def mouseMoveEvent(self, e):

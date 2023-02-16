@@ -46,17 +46,15 @@ class Simple_drawing_window3(QWidget):
 def main():
     app = QApplication(sys.argv)
 
-<<<<<<< Updated upstream
     w1 = Simple_drawing_window1()
     w2 = Simple_drawing_window2()
     w3 = Simple_drawing_window3()
     w2.show()
     w1.show()
     w3.show()
-=======
+
     w = Simple_drawing_window2()
     w.show()
->>>>>>> Stashed changes
 
     return app.exec_()
 
