@@ -3,12 +3,6 @@ from PySide6.QtCore import *
 from PySide6.QtWidgets import *
 from PySide6.QtGui import *
 
-
-class Simple_drawing_window3(QWidget):
-    def __init__(self):
-        QWidget.__init__(self, None)
-        self.setWindowTitle("Simple Drawing 3")
-        self.cat = QPixmap("/Users/pun/Source Code/SEP/Lab6/cat5.png")
 class Simple_drawing_window2(QWidget):
     def __init__(self):
         QWidget.__init__(self, None)
@@ -20,22 +14,6 @@ class Simple_drawing_window2(QWidget):
         p.begin(self)
 
         p.setPen(QColor(0, 0, 0))
-        p.drawPixmap(QRect(200, 200, 400, 200), self.cat)
-
-        p.end()
-
-
-def main():
-    app = QApplication(sys.argv)
-
-    w = Simple_drawing_window3()
-    w.show()
-
-    return app.exec()
-
-
-if __name__ == "__main__":
-    sys.exit(main())
         p.setBrush(QColor(0, 127, 0))
         p.drawPolygon( [
             QPoint(70, 100), QPoint(100, 110),
